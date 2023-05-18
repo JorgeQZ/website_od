@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Typold';
+    src: url('../font/Typold-Bold.woff') format('woff'),
+        url('../font/Typold-Bold.ttf') format('truetype'),
+        url('../font/Typold-Bold.svg#Typold-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Typold';
+    src: url('../font/Typold-Regular.woff') format('woff'),
+        url('../font/Typold-Regular.ttf') format('truetype'),
+        url('../font/Typold-Regular.svg#Typold-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Typold Book';
+    src: url('../font/Typold-Book.woff') format('woff'),
+        url('../font/Typold-Book.ttf') format('truetype'),
+        url('../font/Typold-Book.svg#Typold-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Utopia Std';
+    src: url('../font/UtopiaStd-Regular.woff2') format('woff2'),
+        url('../font/UtopiaStd-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
