@@ -94,9 +94,6 @@ header .container .main-logo img {
   max-width: 180px;
   height: auto;
 }
-header .container .main-menu {
-  display: none;
-}
 header .container .main-menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,6 +152,37 @@ header .container .main-menu ul li.current a {
   line-height: 1;
   padding: 0;
   border-bottom: 2px solid #bdb5b0;
+}
+
+.main-banner {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-banner .container .text {
+  font-size: min(18vw, 95px);
+  font-family: "Utopia Std";
+  color: white;
+  line-height: 1;
+}
+.main-banner .container .text .sub-text {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: inherit;
+  color: #bfb5ac;
+  line-height: 1;
+  padding: 0;
+  border-bottom: 2px solid #bdb5b0;
+  font-style: italic;
 }
 
 .title {

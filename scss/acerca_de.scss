@@ -1,0 +1,53 @@
+@import "vars";
+.main-banner{
+    background-image: url(../img/banner-acerca-de.jpg);
+}
+.img_desc-cont{
+    margin-bottom: 0;
+    &.r-square{
+        .column{
+            .text-cont{
+                padding-right: 0;
+                padding-left: 100px;
+            }
+        }
+    }
+    .column{
+        .img-cont{
+            width: 100%;
+            img{
+                margin-bottom: -4px;
+            }
+        }
+
+        .text-cont{
+            padding-left: 0;
+
+            padding-right: 100px;
+
+            .desc{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .img_desc-cont{
+
+        &.r-square{
+            flex-direction: column-reverse;
+            .column{
+                .text-cont{
+                    padding-left: 0;
+                }
+            }
+        }
+        .column{
+            .text-cont{
+                padding-right: 0;
+            }
+        }
+
+    }
+}

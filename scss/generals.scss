@@ -1,15 +1,5 @@
-@import "font";
 
-/**
-* Variables
-*/
-$main-color: #bdb5b0;
-$max-width: 1170px;
-$font-title: 30px;
-$font-text: 16px;
-$font-button: 12px;
-// fin de variables
-
+@import "vars";
 // Generales
 *{
     padding: 0;
@@ -67,7 +57,6 @@ header{
         }
 
         .main-menu{
-            display: none;
             ul{
                 display: flex;
                 align-items: center;
@@ -122,6 +111,37 @@ header{
                 line-height: 1;
                 padding: 0;
                 border-bottom: 2px solid $main-color;
+            }
+        }
+    }
+}
+
+.main-banner{
+
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .container{
+        .text{
+            // font-size: 95px;
+            font-size: min(18vw, 95px);
+            font-family: 'Utopia Std';
+            color: white;
+            line-height: 1;
+            .sub-text{
+                width: fit-content;
+                font-family: inherit;
+                color: #bfb5ac;
+                line-height: 1;
+                padding: 0;
+                border-bottom: 2px solid $main-color;
+                font-style: italic;
             }
         }
     }
