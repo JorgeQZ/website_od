@@ -44,6 +44,7 @@ header{
     top: 0;
     left: 0;
     z-index: 10;
+    // display: none;
     .container{
         display: flex;
         align-items: center;
@@ -395,6 +396,10 @@ header{
     }
 }
 
+.contact-cont.full{
+    padding-top: 220px;
+    padding-bottom: 220px;
+}
 footer{
     padding: 95px 0;
     background-color: $main-color;

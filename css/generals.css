@@ -498,6 +498,11 @@ header .container .main-menu ul li.current a {
   cursor: pointer;
 }
 
+.contact-cont.full {
+  padding-top: 220px;
+  padding-bottom: 220px;
+}
+
 footer {
   padding: 95px 0;
   background-color: #bdb5b0;

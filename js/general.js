@@ -51,6 +51,9 @@ $(document).ready(function () {
             let current_info = socios[$(this).data('info')];
 
             popup.find(".title").text(current_info.nombre);
+            popup.find(".mail").text(current_info.contacto);
+            popup.find(".mail").attr("href", "mailto:" + current_info.contacto);
+            popup.find(".v-img").attr('src', current_info.imagen);
             popup.find(".job").text(current_info.puesto);
 
             // Resumen
@@ -61,7 +64,7 @@ $(document).ready(function () {
             }
 
             // Experiencia
-            let exp = "<li><b>Experiencia</b><ul class='exp_ul'>";
+            let exp = "<li class='li_exp_ul'><b>Experiencia</b><ul class='exp_ul'>";
             $(exp).appendTo(popup.find(".main"));
 
             for (let index = 0; index < current_info.experiencia.length; index++) {
@@ -72,7 +75,7 @@ $(document).ready(function () {
             $(exp).appendTo(popup.find(".main"));
 
             // Credenciales
-            let cre = "<li><b>Credenciales</b><ul class='cre_ul'>";
+            let cre = "<li class='li_cre_ul'><b>Credenciales</b><ul class='cre_ul'>";
             $(cre).appendTo(popup.find(".main"));
 
             for (let index = 0; index < current_info.credenciales.length; index++) {
@@ -83,7 +86,7 @@ $(document).ready(function () {
             $(exp).appendTo(popup.find(".main"));
 
             // Idiomas
-            let idio = "<li><b>Idiomas</b><ul class='idio_ul'>";
+            let idio = "<li class='li_sidio_ul'><b>Idiomas</b><ul class='idio_ul'>";
             $(idio).appendTo(popup.find(".main"));
 
             for (let index = 0; index < current_info.idiomas.length; index++) {
@@ -100,6 +103,7 @@ $(document).ready(function () {
     let socios = {};
     socios["Antonio R"] = {
         "nombre": "Antonio R. O’Farrill González",
+        "imagen": "img/vertical/anotnio-r.png",
         "puesto": "Socio Fundador",
         "resumen": [
             "Recibió su título de Licenciado en Ciencias Jurídicas por parte de la Facultad de Derecho y Ciencias Sociales, de la Universidad Autónoma de Nuevo León. Desde ese mismo año fundo su propio despacho, atendiendo principalmente todo tipo de Juicios Civiles y Mercantiles, asi como el asesoramiento a sus distintos clientes en materia Societaria.",
@@ -124,6 +128,7 @@ $(document).ready(function () {
 
     socios["Alejandro G"] = {
         "nombre": "Alejandro G. Dingler Delgado",
+        "imagen": "img/vertical/alejandro-g.png",
         "puesto": "Socio Fundador",
         "resumen": [
             "Recibió su título de Licenciado en Ciencias Jurídica por la Facultad de Derecho y Ciencias Sociales de la Universidad Autónoma de Nuevo León. Desde su graduación comenzo a trabajar con el licenciado Antonio O’Farrill Gonzalez, de quien se hizo socio, fundando el despacho O’Farrill & Dingler, Abogados.",
@@ -160,6 +165,7 @@ $(document).ready(function () {
 
     socios["Ernesto D"] = {
         "nombre": "Ernesto Dingler Delgado",
+        "imagen": "img/vertical/ernesto-d.png",
         "puesto": "Socio Fundador",
         "resumen": [
             "Recibió su título de Licenciado en Ciencias Jurídica por la Facultad de Derecho y Ciencias Sociales de la Universidad Autónoma de Nuevo León. Desde el año 2003 comenzo a trabajar con los licenciados Antonio R. O’Farrill Gonzalez y Alejandro G. Dingler Delgado de quienes posteriormente se hizo socio, fundando el despacho O’Farrill-Dingler & Cervantes, Abogados.",
@@ -182,6 +188,7 @@ $(document).ready(function () {
 
     socios["Mauricio A"] = {
         "nombre": "Mauricio Alberto O’Farrill Escamilla",
+        "imagen": "img/vertical/mauricio-a.png",
         "puesto": "Socio Fundador",
         "resumen": [
             "Recibió su título de Licenciado en Licenciado en Derecho, Derecho Corporativo e Internacinal y Entorno Politico NacionalLicenciado en Derecho, Derecho Corporativo e Internacinal y Entorno Politico Nacional, por la Universidad de Monterrey (UDEM). Desde el año 2010 comenzo a trabajar con los licenciados Antonio R. O’Farrill Gonzalez y Alejandro G. Dingler Delgado de quienes en el año 2021 se hizo socio, fundando el despacho O’Farrill-Dingler & Cervantes, Abogados.",
@@ -207,6 +214,7 @@ $(document).ready(function () {
 
     socios["Jorge A"] = {
         "nombre": "Jorge Andrés Cervantes Aguirre",
+        "imagen": "img/vertical/jorge-a.png",
         "puesto": "Socio Fundador",
         "resumen": [
             "Jorge Cervantes es Licenciado en Derecho por la Universidad de Monterrey (UDEM), cuenta con estudios de Maestría en Derecho Corporativo por la Universidad Anáhuac México y Administración de Empresas por la Universidad Francisco de Vitoria en Madrid España. Además, cuenta con estudios de especialidad en Auditoría Corporativa, Marketing y Dirección Comercial, y certificaciones avanzadas en Cumplimiento Normativo por la International Compliance Association (ICA).",
@@ -227,8 +235,10 @@ $(document).ready(function () {
         "idiomas": ["Inglés", "Español"],
         "contacto": "jcervantes@oyd.mx"
     };
+
     socios["Emilio C"] = {
         "nombre": "Emilio Cárdenas Serna",
+        "imagen": "img/vertical/claudio-c.png",
         "puesto": "Asociado",
         "resumen": [
             "Recibió su título de Licenciado en Derecho por la Facultad Libre de Derecho de Monterrey en el año 2019.",
@@ -259,6 +269,7 @@ $(document).ready(function () {
 
     socios["Abelardo D"] = {
         "nombre": "Abelardo Díaz Fernández",
+        "imagen": "img/vertical/abelardo-f.png",
         "puesto": "Pasante",
         "resumen": [
             "Recibió su título de Licenciado en Licenciado en Derecho, por la Facultad Libre de Derecho de Monterrey (FLDM) en el año 2022. En el año 2019 inició sus practicas en el Centro Juridico Gratutito FLDM, asi como en la Notaria Pública 66 de Torreón, Coahuila. Actualmente ocupa el cargo de Pasante para el area de Derecho Corporativo en O´Farril-Dingler y Cervantes Asociados",
@@ -278,6 +289,7 @@ $(document).ready(function () {
 
     socios["Camilo R"] = {
         "nombre": "Camilo Ramos Ledezma",
+        "imagen": "img/vertical/camilo-r.png",
         "puesto": "Asociado",
         "resumen": [
             "Recibió su título de Licenciado en Ciencias Jurídicas por parte de la Facultad de Derecho y Ciencias Sociales, de la Universidad Autónoma de Nuevo León. Desde su incursion en el Despacho se ha desempeñado en las labores y atencion de asuntos de carácter Penal y Laboral, defendiendo tanto los intereses de sus clientes como Victimas y como Imputados o investigados.",
@@ -299,6 +311,7 @@ $(document).ready(function () {
 
     socios["Maria M"] = {
         "nombre": "Maria Mercedes Espinosa Salas",
+        "imagen": "img/vertical/maria-m.png",
         "puesto": "Asociado",
         "resumen": [
             "Recibió su título de Licenciado en Ciencias Jurídicas por parte de la Facultad de Derecho y Ciencias Sociales, de la Universidad Autónoma de Nuevo León.Desde su incursion en el Despacho se ha desempeñado en las labores y atencion de asuntos de carácter Familiar y Laboral.",
@@ -314,8 +327,10 @@ $(document).ready(function () {
         "idiomas": ["Español"],
         "contacto": "mespinosa@oyd.mx"
     };
+
     socios["Maria F"] = {
         "nombre": "María Fernanda Morán Valenzuela",
+        "imagen": "img/vertical/maria-f.png",
         "puesto": "Practicante",
         "resumen": [
             "Estudiante de Derecho por la Facultad Libre de Derecho de Monterrey (FLDM) hasta el año actual. A partir de Febrero de 2023 empezó a trabajar con los Licenciados Mauricio Alberto O’Farrill Escamilla y Jorge Andrés Cervantes Aguirre en el despacho O’Farrill-Dingler & Cervantes, Abogados. ",
@@ -329,13 +344,14 @@ $(document).ready(function () {
         ],
         "credenciales": [
             "Licenciado en Derecho por la Facultad Libre de Derecho de Monterrey.",
-            "International Business Transactions por la Facultad Libre de Derecho de Monterrey. r"],
+            "International Business Transactions por la Facultad Libre de Derecho de Monterrey."],
         "idiomas": ["Inglés", "Español", "Francés"],
         "contacto": "mafer290899@gmail.com"
     };
 
     socios["Andres T"] = {
         "nombre": "Andres Tueme Mendoza",
+        "imagen": "img/vertical/andres-t.png",
         "puesto": "Pasante",
         "resumen": [
             "Estudiante de la Licenciatura en Derecho y Finanzas por la Universidad de Monterrey. Es dueño de un negocio exitoso de lentes, donde tiene su e-commerce y es parte de una tienda física en la ciudad de Torreón, Coahuila. Curso sus años de preparatoria en New Mexico Military Institute, una escuela de régimen militar, donde demostró habilidades de liderazgo, capacidad de trabajar en equipo, seguridad y gestión de proyectos. Alcanzo uno de los puestos más altos en dicha escuela, siendo First Sergeant, donde estuvo a cargo de alrededor de sesenta personas, lo que le permitió destacar en su posición y en diversas actividades extracurriculares.",

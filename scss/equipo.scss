@@ -1,7 +1,5 @@
 @import "vars";
-.main-menu{
-    display: none;
-}
+
 .popup-cont{
     position: fixed;
     top: 0;
@@ -72,8 +70,20 @@
                     font-size: 20px;
                     line-height: 1;
                 }
+                a.mail{
+                    text-decoration: none;
+                    display: block;
+                    margin-top: 15px;
+                    font-size: 18px;
+                    color: #241f20;
+                    font-family: 'Utopia Std';
+                    transition: all 300ms;
+                    &:hover{
+                        color: $main-color;
+                    }
+                }
                 .content{
-                    margin-top: 40px;
+                    margin-top: 15px;
                     width: 100%;
                     padding-right: 10px;
                     height: 480px;
@@ -81,6 +91,10 @@
                     text-align: justify;
                     font-size: 16px;
 
+                    b{
+                        font-family: 'Typold';
+                        // font-weight: bold;
+                    }
                    /* width */
                     &::-webkit-scrollbar {
                         width: 3px;
@@ -100,12 +114,31 @@
                     &::-webkit-scrollbar-thumb:hover {
                         background: #b3b3b3;
                     }
-                    ul{
+                    .main{
                         padding: 0;
                         margin: 0;
                         li{
                             line-height: 1.5;
                             margin-bottom: 30px;
+                            list-style: disc;
+                            text-indent: 20px;
+                            position: relative;
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                background-color: $main-color;
+                                border-radius: 50%;
+                                width: 4px;
+                                height: 4px;
+                                top: 12px;
+                                left: 7px;
+                            }
+
+                            ul{
+                                li{
+                                    margin-bottom: 5px;
+                                }
+                            }
                         }
                     }
                 }
@@ -125,17 +158,25 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            row-gap: 30px;
-            column-gap: 30px;
+            justify-content: start;
+            // row-gap: 30px;
+            // column-gap: 30px;
+
             .member{
-                min-width:270px;
-                flex: 30%;
-                max-width: 30%;
+
+                box-sizing: border-box;
+
+                width: calc(33% - 17px);
                 height: 328px;
+                margin-right: 30px;
+                margin-bottom: 30px;
 
                 border: 2px solid $main-color;
                 position: relative;
 
+                &:nth-child(3n){
+                    margin-right: 0;
+                }
                 &:last-child{
                     margin-bottom: 30px;
                 }
@@ -259,6 +300,71 @@
                         opacity: 0;
 
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .popup-cont{
+        .box-cont{
+            flex-direction: column;
+            .column{
+
+                &:first-of-type{
+                    width: 100%;
+                    background-color: $main-color;
+                    display: flex;
+                    align-items: end;
+                    justify-content: center;
+                    img{
+                        // display: none;
+                        width: 300px;
+                        width: 120px;
+                    }
+                }
+                &:last-of-type{
+                    width: 100%;
+                    padding: 20px 40px;
+                    height: 480px;
+
+                    .content{
+
+                        height: 280px;
+
+                    }
+                }
+            }
+
+        }
+    }
+    .team-cont{
+        .container{
+            .members-cont{
+                .member{
+                    max-width: calc(50% - 7.5px);
+                    flex: 1 0 calc(50% - 7.5px);
+                    margin-right: 15px;
+                    overflow: hidden;
+
+                    &:nth-child(even){
+                        margin-right: 0;
+                    }
+
+                    &:nth-child(3n){
+                        margin-right: 15px;
+                    }
+                    &:nth-child(6){
+                        margin-right:0px;
+                    }
+
+                    .img-cont{
+                        .text{
+                            padding: 10px;
+                        }
+                    }
+
                 }
             }
         }
