@@ -232,10 +232,10 @@
         </div>
       </div>
       <div class="column">
-        <form action="">
-          <input type="text" name="nombre" placeholder="Nombre">
-          <input type="mail" name="correo" placeholder="Correo">
-          <textarea name="mensaje" id="mensaje" rows="5" placeholder="Mensaje"></textarea>
+        <form id="contacto" action="">
+          <input type="text" name="nombre" placeholder="Nombre" required>
+          <input type="mail" name="correo" placeholder="Correo" required>
+          <textarea name="mensaje" id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
           <input type="submit" value="Enviar">
         </form>
       </div>
@@ -255,4 +255,41 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/general.js"></script>
 </body>
+
+  <script>
+    $(document).ready(function () {
+
+        $("form#contacto").submit(function(e){
+          e.preventDefault();
+          $(".contact-cont .container .column form .msg").remove();
+          //$(this).children(".contenedor-contacto-general .cont-contacto .contenedor-contacto .msg").remove();
+          var nombre = $(this).children("input[name='nombre']").val();
+          var correo = $(this).children("input[name='correo']").val();
+          var mensaje = $(this).children("textarea").val();
+
+          $(this).children("input[name='nombre']").val("");
+          $(this).children("input[name='correo']").val("");
+          $(this).children("textarea").val("");
+
+          var hoy = $(this);
+
+          $.post("correo.php",{
+            nombre_ : nombre,
+            correo_ : correo,
+            mensaje_ : mensaje
+          },
+          function(data){
+            if(data="Exito"){
+              hoy.append("<p class='msg'>Mensaje enviado correctamente.</p>");
+            }
+            else{
+              hoy.append("<p class='msg'>Hubo un error con el envío.</p>");
+            }
+          });
+
+        });
+
+  });
+  </script>
+
 </html>

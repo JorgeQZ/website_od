@@ -56,10 +56,7 @@
 
 @media screen and (max-width: 768px) {
   .img_desc-cont.r-square {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .img_desc-cont.r-square .column .text-cont {
     padding-left: 0;
