@@ -39,7 +39,37 @@ $(document).ready(function () {
         nav: false,
         dots: false,
         items: 1
-    })
+    });
+
+    //Forma de Contacto
+    $("form#contacto").submit(function(e){
+        e.preventDefault();
+        $(".contact-cont .container .column form .msg").remove();
+        //$(this).children(".contenedor-contacto-general .cont-contacto .contenedor-contacto .msg").remove();
+        var nombre = $(this).children("input[name='nombre']").val();
+        var correo = $(this).children("input[name='correo']").val();
+        var mensaje = $(this).children("textarea").val();
+
+        $(this).children("input[name='nombre']").val("");
+        $(this).children("input[name='correo']").val("");
+        $(this).children("textarea").val("");
+
+        var hoy = $(this);
+
+        $.post("correo.php",{
+          nombre_ : nombre,
+          correo_ : correo,
+          mensaje_ : mensaje
+        },
+        function(data){
+          if(data="Exito"){
+            hoy.append("<p class='msg'>Mensaje enviado correctamente.</p>");
+          }
+          else{
+            hoy.append("<p class='msg'>Hubo un error con el envío.</p>");
+            }
+        });
+    });
 
     // Configuración de Pop Up
     let popup = $('.popup-cont');
