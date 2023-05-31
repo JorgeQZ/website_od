@@ -374,6 +374,4 @@ $(document).ready(function () {
         "idiomas": ["Inglés", "Español"],
         "contacto": "andrestueme3@gmail.com"
     };
-
-    console.log(socios);
 });
