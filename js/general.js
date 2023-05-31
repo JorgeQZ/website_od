@@ -28,6 +28,11 @@ function includeHTML() {
 
 $(document).ready(function () {
 
+    $('#menu-button').click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.main-menu').toggleClass('active');
+    });
     $('.slider-cont').owlCarousel({
         loop: false,
         margin: 0,
