@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="css/generals.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/animate.css">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="manifest" href="/img/site.webmanifest">
-  <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#333333">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#333333">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#333333">
   <title>O&D - Inicio</title>
@@ -45,7 +46,7 @@
 
   <!-- Slider -->
   <div class="slider-cont owl-carousel owl-theme">
-    <div class="item" style="background-image: url('/img/slider-1.png');">
+    <div class="item" style="background-image: url('img/slider-1.png');">
       <div class="container">
         <div class="text">
           Brindando soluciones<br>
@@ -53,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="item" style="background-image: url('/img/slider-1.png');">
+    <div class="item" style="background-image: url('img/slider-1.png');">
       <div class="container">
         <div class="text">
           Brindando soluciones<br>
@@ -61,7 +62,7 @@
         </div>
       </div>
     </div>
-    <div class="item" style="background-image: url('/img/slider-1.png');">
+    <div class="item" style="background-image: url('img/slider-1.png');">
       <div class="container">
         <div class="text">
           Brindando soluciones<br>
@@ -262,5 +263,31 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/general.js"></script>
 </body>
+
+<style>
+  body > .title,
+  .services-cont .container .item,
+  .qual-cont .container .item,
+  .contact-cont .title,
+  .contact-cont .container .column{
+      opacity: 0;
+  }
+</style>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+  
+<script>
+  var $j = jQuery.noConflict();
+  
+  jQuery(function($j) {
+      $j('body > .title, .services-cont .container .item, .qual-cont .container .item, .contact-cont .title, .contact-cont .container .column').waypoint(function() {
+          $j(this).toggleClass('fadeIn animated');
+      }, {
+          offset: '70%',
+          triggerOnce: true
+      });
+  });
+</script>
 
 </html>
