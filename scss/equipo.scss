@@ -326,12 +326,18 @@
                 }
                 &:last-of-type{
                     width: 100%;
-                    padding: 20px 40px;
-                    height: 480px;
+                    padding: 20px 30px;
+                    height: 390px;
+                    .title{
+                        font-size: 20px;
+                    }
+                    .job{
+                        font-size: 16px;
+                    }
 
                     .content{
 
-                        height: 280px;
+                        height: 250px;
 
                     }
                 }
@@ -345,6 +351,7 @@
                 .member{
                     max-width: calc(50% - 7.5px);
                     flex: 1 0 calc(50% - 7.5px);
+
                     margin-right: 15px;
                     overflow: hidden;
 
@@ -354,6 +361,40 @@
 
                     &:nth-child(3n){
                         margin-right: 15px;
+                    }
+                    &:nth-child(6){
+                        margin-right:0px;
+                    }
+
+                    .img-cont{
+                        .text{
+                            padding: 10px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .team-cont{
+        .container{
+            .members-cont{
+                .member{
+                    max-width:100%;
+                    flex: 1 0 100%;
+
+                    margin-right: 0;
+                    overflow: hidden;
+
+                    &:nth-child(even){
+                        margin-right: 0;
+                    }
+
+                    &:nth-child(3n){
+                        margin-right: 0;
                     }
                     &:nth-child(6){
                         margin-right:0px;

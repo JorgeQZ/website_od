@@ -24,7 +24,7 @@
   <header>
     <div class="container">
       <div class="main-logo">
-        <a href="">
+        <a href="index.html">
           <img src="img/logo.png" alt="">
         </a>
       </div>
@@ -232,7 +232,7 @@
           <br><br>
 
           <address>
-            Domicilio: Avenida Fundadores número 4001, interior 1008,<br> Col. Del Paseo Residencial, Monterrey, Nuevo León, C.P. 64909
+            Domicilio: Avenida Fundadores número 4001, interior 1008, Col. Del Paseo Residencial,<br>Monterrey, Nuevo León, C.P. 64909
           </address>
           <br><br>
 
@@ -265,28 +265,29 @@
 </body>
 
 <style>
-  body > .title,
+  body>.title,
   .services-cont .container .item,
   .qual-cont .container .item,
   .contact-cont .title,
-  .contact-cont .container .column{
-      opacity: 0;
+  .contact-cont .container .column {
+    opacity: 0;
   }
+
 </style>
-  
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
-  
+
 <script>
   var $j = jQuery.noConflict();
-  
-  jQuery(function($j) {
-      $j('body > .title, .services-cont .container .item, .qual-cont .container .item, .contact-cont .title, .contact-cont .container .column').waypoint(function() {
-          $j(this).toggleClass('fadeIn animated');
-      }, {
-          offset: '70%',
-          triggerOnce: true
-      });
+
+  jQuery(function ($j) {
+    $j('body > .title, .services-cont .container .item, .qual-cont .container .item, .contact-cont .title, .contact-cont .container .column').waypoint(function () {
+      $j(this).toggleClass('fadeIn animated');
+    }, {
+      offset: '70%',
+      triggerOnce: true
+    });
   });
 </script>
 

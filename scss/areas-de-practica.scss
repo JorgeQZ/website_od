@@ -41,6 +41,9 @@
                         height: auto;
                         text-align: left;
                         margin-left: 0;
+                        &::before{
+                            display: none;
+                        }
                     }
                 }
             }

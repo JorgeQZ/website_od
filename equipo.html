@@ -44,7 +44,7 @@
   <header>
     <div class="container">
       <div class="main-logo">
-        <a href="">
+        <a href="index.html">
           <img src="img/logo.png" alt="">
         </a>
       </div>
@@ -78,7 +78,7 @@
   <!-- Equipo -->
   <div class="team-cont">
     <div class="container">
-      <div class="title">Socios:</div>
+      <div class="title">Socios</div>
 
       <!-- Socios -->
       <div class="members-cont">
@@ -178,7 +178,7 @@
       <!-- Socios -->
 
       <!-- Equipo -->
-      <div class="title">Equipo :</div>
+      <div class="title">Equipo</div>
       <div class="members-cont">
 
         <!-- items 10 -->
@@ -387,24 +387,25 @@
 
 <style>
   .title,
-  .team-cont .container .members-cont .member{
-      opacity: 0;
+  .team-cont .container .members-cont .member {
+    opacity: 0;
   }
+
 </style>
-  
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
-  
+
 <script>
   var $j = jQuery.noConflict();
-  
-  jQuery(function($j) {
-      $j('.title, .team-cont .container .members-cont .member').waypoint(function() {
-          $j(this).toggleClass('fadeIn animated');
-      }, {
-          offset: '70%',
-          triggerOnce: true
-      });
+
+  jQuery(function ($j) {
+    $j('.title, .team-cont .container .members-cont .member').waypoint(function () {
+      $j(this).toggleClass('fadeIn animated');
+    }, {
+      offset: '70%',
+      triggerOnce: true
+    });
   });
 </script>
 
